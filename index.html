@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Upper Case to Lower Case Converter – Free Text Case Converter</title>
+  <meta name="description" content="Free Upper Case to Lower Case Converter with uppercase, lowercase, title case, sentence case, and alternating case options. Fast, simple, mobile-friendly, and easy to use." />
+  <meta name="keywords" content="upper case to lower case converter, text case converter, uppercase converter, lowercase converter, title case converter, sentence case converter, case changer tool" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://shahidlogs.github.io/upper-case-to-lower-case-converter/" />
+
+  <meta property="og:title" content="Upper Case to Lower Case Converter – Free Text Case Converter" />
+  <meta property="og:description" content="Convert text to uppercase, lowercase, title case, sentence case, and alternating case instantly." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shahidlogs.github.io/upper-case-to-lower-case-converter/" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    .wrapper {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    .card {
+      background: #f8fafc;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 22px;
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+      text-align: center;
+      color: #111827;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 22px;
+      text-align: center;
+      font-size: 16px;
+      color: #4b5563;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .textarea-wrap {
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 240px;
+      resize: vertical;
+      border: 2px solid #d1d5db;
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 17px;
+      line-height: 1.7;
+      outline: none;
+      background: #fff;
+      color: #111827;
+      transition: border-color 0.2s ease;
+      font-weight: 400;
+      -webkit-user-select: text;
+      user-select: text;
+      -webkit-touch-callout: default;
+    }
+
+    textarea:focus {
+      border-color: #2563eb;
+      box-shadow: none;
+      font-weight: 400;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: #e5e7eb;
+      color: #111827;
+    }
+
+    .case-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 0;
+    }
+
+    .stat-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      display: block;
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+      word-break: break-word;
+    }
+
+    .bottom-text {
+      margin-top: 26px;
+      font-size: 15px;
+      color: #4b5563;
+    }
+
+    .bottom-text h2 {
+      font-size: 22px;
+      margin: 0 0 10px;
+      color: #111827;
+    }
+
+    .bottom-text p {
+      margin: 0 0 12px;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 700px) {
+      .wrapper {
+        padding: 14px 12px 28px;
+      }
+
+      .card {
+        padding: 16px;
+        border-radius: 14px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .intro {
+        font-size: 15px;
+      }
+
+      textarea {
+        min-height: 220px;
+        font-size: 16px;
+        padding: 14px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-value {
+        font-size: 24px;
+      }
+
+      button {
+        width: auto;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Upper Case to Lower Case Converter",
+    "url": "https://shahidlogs.github.io/upper-case-to-lower-case-converter/",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "Any",
+    "description": "Free Upper Case to Lower Case Converter with uppercase, lowercase, title case, sentence case, and alternating case options."
+  }
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <h1>Upper Case to Lower Case Converter</h1>
+
+      <p class="intro">
+        Convert text instantly with uppercase, lowercase, title case, sentence case, and alternating case options. This free text case converter is simple, fast, mobile-friendly, and easy to use.
+      </p>
+
+      <div class="actions">
+        <button class="btn-secondary" id="pasteBtn">Paste</button>
+        <button class="btn-primary" id="copyBtn">Copy Text</button>
+        <button class="btn-secondary" id="clearBtn">Clear Text</button>
+      </div>
+
+      <div class="textarea-wrap">
+        <textarea id="text" placeholder="Type or paste your text here..." autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"></textarea>
+      </div>
+
+      <div class="case-buttons">
+        <button class="btn-primary" id="upperBtn">UPPERCASE</button>
+        <button class="btn-secondary" id="lowerBtn">lowercase</button>
+        <button class="btn-secondary" id="titleBtn">Title Case</button>
+        <button class="btn-secondary" id="sentenceBtn">Sentence case</button>
+        <button class="btn-secondary" id="capitalizeBtn">Capitalize Each Word</button>
+        <button class="btn-secondary" id="alternateBtn">aLtErNaTiNg CaSe</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box">
+          <span class="stat-label">Characters</span>
+          <span class="stat-value" id="chars">0</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-label">Characters (without spaces)</span>
+          <span class="stat-value" id="charsNo">0</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-label">Words</span>
+          <span class="stat-value" id="words">0</span>
+        </div>
+
+        <div class="stat-box">
+          <span class="stat-label">Sentences</span>
+          <span class="stat-value" id="sentences">0</span>
+        </div>
+      </div>
+
+      <div class="bottom-text">
+        <h2>Free and Easy Text Case Converter</h2>
+        <p>
+          This free case converter helps you change text to uppercase, lowercase, title case, sentence case, and more in just one click. It is useful for writers, students, bloggers, marketers, and anyone working with text.
+        </p>
+        <p>
+          Whether you want to fix headings, reformat paragraphs, clean up copied content, or change the style of your text, this tool makes text conversion quick and simple on both desktop and mobile.
+        </p>
+      </div>
+
+      <div class="footer-note">
+        Simple, fast, and mobile-friendly text case converter.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const text = document.getElementById("text");
+    const charsEl = document.getElementById("chars");
+    const charsNoEl = document.getElementById("charsNo");
+    const wordsEl = document.getElementById("words");
+    const sentencesEl = document.getElementById("sentences");
+
+    const pasteBtn = document.getElementById("pasteBtn");
+    const copyBtn = document.getElementById("copyBtn");
+    const clearBtn = document.getElementById("clearBtn");
+
+    const upperBtn = document.getElementById("upperBtn");
+    const lowerBtn = document.getElementById("lowerBtn");
+    const titleBtn = document.getElementById("titleBtn");
+    const sentenceBtn = document.getElementById("sentenceBtn");
+    const capitalizeBtn = document.getElementById("capitalizeBtn");
+    const alternateBtn = document.getElementById("alternateBtn");
+
+    function updateCounts() {
+      const value = text.value;
+      const trimmed = value.trim();
+
+      const chars = value.length;
+      const charsNo = value.replace(/\s/g, "").length;
+      const words = trimmed ? trimmed.split(/\s+/).filter(Boolean).length : 0;
+      const sentences = trimmed ? value.split(/[.!?]+/).filter(item => item.trim().length > 0).length : 0;
+
+      charsEl.textContent = chars;
+      charsNoEl.textContent = charsNo;
+      wordsEl.textContent = words;
+      sentencesEl.textContent = sentences;
+    }
+
+    function toTitleCase(str) {
+      return str.toLowerCase().replace(/\b\w/g, function(char) {
+        return char.toUpperCase();
+      });
+    }
+
+    function toSentenceCase(str) {
+      return str.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, function(char) {
+        return char.toUpperCase();
+      });
+    }
+
+    function capitalizeEachWord(str) {
+      return str.replace(/\b\w/g, function(char) {
+        return char.toUpperCase();
+      });
+    }
+
+    function toAlternatingCase(str) {
+      let result = "";
+      let makeUpper = false;
+
+      for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+
+        if (/[a-z]/i.test(char)) {
+          result += makeUpper ? char.toUpperCase() : char.toLowerCase();
+          makeUpper = !makeUpper;
+        } else {
+          result += char;
+        }
+      }
+
+      return result;
+    }
+
+    text.addEventListener("input", updateCounts);
+
+    upperBtn.addEventListener("click", function() {
+      text.value = text.value.toUpperCase();
+      updateCounts();
+      text.focus();
+    });
+
+    lowerBtn.addEventListener("click", function() {
+      text.value = text.value.toLowerCase();
+      updateCounts();
+      text.focus();
+    });
+
+    titleBtn.addEventListener("click", function() {
+      text.value = toTitleCase(text.value);
+      updateCounts();
+      text.focus();
+    });
+
+    sentenceBtn.addEventListener("click", function() {
+      text.value = toSentenceCase(text.value);
+      updateCounts();
+      text.focus();
+    });
+
+    capitalizeBtn.addEventListener("click", function() {
+      text.value = capitalizeEachWord(text.value);
+      updateCounts();
+      text.focus();
+    });
+
+    alternateBtn.addEventListener("click", function() {
+      text.value = toAlternatingCase(text.value);
+      updateCounts();
+      text.focus();
+    });
+
+    clearBtn.addEventListener("click", function () {
+      text.value = "";
+      updateCounts();
+      text.focus();
+    });
+
+    copyBtn.addEventListener("click", async function () {
+      try {
+        await navigator.clipboard.writeText(text.value);
+        copyBtn.textContent = "Copied!";
+        setTimeout(() => {
+          copyBtn.textContent = "Copy Text";
+        }, 1200);
+      } catch (error) {
+        copyBtn.textContent = "Copy Failed";
+        setTimeout(() => {
+          copyBtn.textContent = "Copy Text";
+        }, 1200);
+      }
+    });
+
+    pasteBtn.addEventListener("click", async function () {
+      try {
+        const clipText = await navigator.clipboard.readText();
+        text.value = clipText;
+        updateCounts();
+        text.focus();
+        pasteBtn.textContent = "Pasted!";
+        setTimeout(() => {
+          pasteBtn.textContent = "Paste";
+        }, 1200);
+      } catch (error) {
+        pasteBtn.textContent = "Paste Failed";
+        setTimeout(() => {
+          pasteBtn.textContent = "Paste";
+        }, 1200);
+      }
+    });
+
+    updateCounts();
+  </script>
+</body>
+</html>
